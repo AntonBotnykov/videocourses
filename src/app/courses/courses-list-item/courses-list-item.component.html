@@ -1,0 +1,43 @@
+<div class="row w3-animate-opacity course-item">
+  <div class="col-12">
+    <div class="course-list-item mb-4 w3-white border w3-hover-shadow w3-hover-light-gray">
+      <div class="row p-2">
+        <div class="col-11">
+          <div class="d-flex">
+            <b class="title">
+              {{courseItem.title}}
+            </b>
+            <div class="ml-auto">
+              <i class="material-icons">alarm</i>
+              {{courseItem.duration}}
+            </div>
+            <div class="ml-2">
+              <span class="w3-tag w3-green">
+                {{courseItem.start_data}}
+              </span>
+            </div>
+          </div>
+          <div class="description">
+            {{courseItem.description}}
+          </div>
+        </div>
+        <div class="col-1 d-flex justify-content-end">
+          <div class="btn-group-vertical ml-auto">
+            <button
+              (click)="edit()"
+              class="w3-button"
+            >
+              <i class="material-icons">edit</i>
+            </button>
+            <button
+              (click)="delete()"
+              class="w3-button"
+            >
+              <i class="material-icons">delete</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

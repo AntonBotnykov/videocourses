@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="input-group p-2">
+        <input
+          [(ngModel)]="searchValue"
+          class="input-search w3-input w3-animate-input w3-border w3-hover-shadow"
+          type="text"
+          placeholder="Search course"
+        />
+        <button
+          (click)="onSearch()"
+          class="w3-button w3-btn w3-ripple w3-green ml-2"
+        >
+          <i class="material-icons">search</i>
+          Search
+        </button>
+        <button
+          (click)="onAdd()"
+          class="w3-button w3-btn w3-ripple w3-blue ml-auto"
+        >
+          <i class="material-icons">add</i>
+          Add course
+        </button>
+      </div>
+      <div class="courses-list p-2">
+        <app-courses-list-item
+          *ngFor="let course of courses"
+          [courseItem]="course"
+          (edited)="onEditCourse($event)"
+          (deleted)="onDeleteCourse($event)"
+        ></app-courses-list-item>
+        <button
+          (click)="onLoadMore()"
+          class="w3-button w3-btn w3-ripple w3-block w3-black"
+        >
+          <i class="material-icons">cached</i>
+          LOAD MORE
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
