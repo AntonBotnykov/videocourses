@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CoursesListComponent } from './courses-list/courses-list.component';
-import { CoursesListItemComponent } from './courses-list-item/courses-list-item.component';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {CoursesListComponent} from './courses-list/courses-list.component';
+import {CoursesListItemComponent} from './courses-list-item/courses-list-item.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -10,7 +10,11 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
     CommonModule,
     FormsModule
   ],
-  declarations: [CoursesListComponent, CoursesListItemComponent],
+  declarations: [
+    CoursesListComponent,
+    CoursesListItemComponent,
+  ],
   exports: [CoursesListComponent]
 })
-export class CoursesModule { }
+export class CoursesModule {
+}

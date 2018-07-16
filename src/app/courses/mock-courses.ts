@@ -5,7 +5,7 @@ export const COURSES: Course[] = [
     id: 1,
     title: 'Angular Intro',
     duration: '1h 30min',
-    start_data: '03/07/2018',
+    start_data: '03 07 2018',
     description: 'bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla ',
   },
   {

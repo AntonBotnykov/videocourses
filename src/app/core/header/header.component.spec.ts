@@ -17,6 +17,7 @@ describe('HeaderComponent', () => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    spyOn(console, 'log');
   });
 
   it('should create', () => {
@@ -24,7 +25,6 @@ describe('HeaderComponent', () => {
   });
 
   it('log out', () => {
-    spyOn(console, 'log');
     component.logOut();
     expect(console.log).toHaveBeenCalledWith('LogOut');
   });
