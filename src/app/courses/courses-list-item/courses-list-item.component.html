@@ -1,15 +1,20 @@
 <div class="row w3-animate-opacity course-item">
   <div class="col-12">
-    <div class="course-list-item mb-4 w3-white w3-hover-shadow w3-hover-light-gray">
+    <div [appCourseStatus]="courseItem.start_data"
+      class="course-list-item mb-4 w3-white w3-hover-shadow w3-hover-light-gray">
       <div class="row p-2">
         <div class="col-11">
           <div class="d-flex">
             <b class="title">
-              {{courseItem.title}}
+              {{courseItem.title | uppercase}}
             </b>
+            <i
+              class="rating-icon fa"
+              [ngClass]="{'fa-star': courseItem.top_rated, 'fa-star-o': !courseItem.top_rated}"
+              aria-hidden="false"></i>
             <div class="ml-auto">
               <i class="material-icons">alarm</i>
-              {{courseItem.duration}}
+              {{courseItem.duration | courseDuration}}
             </div>
             <div class="ml-2">
               <span class="w3-tag w3-green">

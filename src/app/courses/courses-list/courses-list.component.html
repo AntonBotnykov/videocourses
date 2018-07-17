@@ -23,9 +23,11 @@
           Add course
         </button>
       </div>
-      <div class="courses-list p-2">
+
+
+      <div *ngIf="courses.length" class="courses-list p-2">
         <app-courses-list-item
-          *ngFor="let course of courses"
+          *ngFor="let course of courses | courseSearch: searchValue"
           [courseItem]="course"
           (edited)="onEditCourse($event)"
           (deleted)="onDeleteCourse($event)"
@@ -38,6 +40,13 @@
           LOAD MORE
         </button>
       </div>
+
+      <div *ngIf="!courses.length" class="courses-list--empty p-2">
+       <h2>NO COURSES</h2>
+      </div>
+
+
+
     </div>
   </div>
 </div>
